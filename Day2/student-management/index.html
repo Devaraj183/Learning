@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top">
+        <div class="SMS">
+            STUDENT MANAGEMENT SYSTEM
+        </div>
+        <div class="Modules">
+            <a href="#" class="nav-m" id="dash">Dashboard</a>
+            <a href="#" class="nav-m" id="add-st">Add Student</a>
+            <a href="#" class="nav-m" id="st-list">Studets List</a>
+        </div> 
+    </nav>
+    <div class="Main">
+        <section class="dashboard module" id="dashboard">
+            <div class="d-same">
+                <h3>Totals Students</h3>
+                <h1 id="totalst">0+</h1>
+            </div>
+            <div class="d-same">
+                <h3>Average Mark</h3>
+                <h1 id="avg-mark">0</h1>
+            </div>
+            <div class="d-same">
+                <h3>Highest Mark</h3>
+                <h1 id="max-mark">0</h1>
+            </div>
+            <div class="d-same">
+                <h3>Lowest Mark</h3>
+                <h1 id="low-mark">0</h1>
+            </div>
+        </section>
+        <section class="AddSt module hide" id="addStudent">
+            <form class="st-form" id="st-id">
+                <h2 class="tittles">Enter Your Details</h2>
+                <div class="form1">
+                    <div><label><p>Enter Your Name : </p><input type="text" id="name" placeholder="Enter Your Name"><p class="error">name required</p></label></div>
+                    <div><label><p>Enter Your Email : </p><input type="email" id="email" placeholder="Enter Your Email" ><p class="error">email required</p></label></div>
+                    <div><label><p>Enter Your Age</p><input type="number" id="age" placeholder="Enter Your Age" min="1" max="100"><p class="error">age required</p></label></div>
+                    <div><label>
+                        <p>Enter Your Department : </p>
+                        <select id="dept">
+                            <option value="">Others</option>
+                            <option value="AIDS">AIDS</option>
+                            <option value="CSE">CSE</option>
+                            <option value="IT">IT</option>
+                            <option value="ECE">ECE</option>
+                            <option value="EEE">EEE</option>
+                            <option value="AIML">AIML</option>
+                            <option value="BIO TECH">BIO TECH</option>
+                            <option value="BIO MEDICAL">BIO MEDICAL</option>
+                            <option value="CIVIL">CIVIL</option>
+                            <option value="CCE">CCE</option>
+                            <option value="MECH">MECH</option>
+                        </select></label>
+                    </div>
+                    <h2 class="tittles">Marks</h2>               
+                    <div><label><p>Subject 1: </p><input type="number" id="m1" placeholder="Enter Your Mark 0 - 100" min="0" max="100"><p class="error">mark required</p></label></div>
+                    <div><label><p>Subject 2: </p><input type="number" id="m2" placeholder="Enter Your Mark 0 - 100" min="0" max="100"><p class="error">mark required</p></label></div>
+                    <div><label><p>Subject 3: </p><input type="number" id="m3" placeholder="Enter Your Mark 0 - 100" min="0" max="100"><p class="error">mark required</p></label></div>
+                    <div><label><p>Subject 4: </p><input type="number" id="m4" placeholder="Enter Your Mark 0 - 100" min="0" max="100"><p class="error">mark required</p></label></div>
+                    <div><label><p>Subject 5: </p><input type="number" id="m5" placeholder="Enter Your Mark 0 - 100" min="0" max="100"><p class="error">mark required</p></label></div>          
+                </div>
+                <div class="submit"><button type="submit" id="btn">Submit</button></div>
+            </form>
+        </section>
+        <section class="StudentsList module hide" id="student-tbl">
+            <input id="search" type="search" placeholder="Search By Name , Email and Dept">
+            <div>
+                <table class="student-table">
+                    <thead class="head">
+                        <tr>
+                            <td>S.No</td>
+                            <td>Name</td>
+                            <td>Email</td>
+                            <td>Age</td>
+                            <td>Dept</td>
+                            <td>Marks</td>
+                            <td>Grade</td>
+                            <td>Delete</td>
+                        </tr>
+                    </thead>
+                    <tbody class="tblBody" id="body-elements">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
